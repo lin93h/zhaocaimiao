@@ -46,14 +46,14 @@
   letter-spacing: 1px;
 }
 .header .site-title .link {
-  color: #333333;
+  color: #A73233;
 }
 .header .nav-list {
   float: right;
 }
 .header .nav-list .link {
   display: block;
-  color: #333333;
+  color: #602320;
   font-weight: 600;
 }
 .header .nav-list .nav_active {
@@ -260,27 +260,39 @@
   overflow: hidden;
 }
 .aboutUs .about_info .about_title_area {
+  position: relative;
   float: left;
   width: 445px;
-  padding-right: 20px;
+  margin-right: 20px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.aboutUs .about_info .about_title_area:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #602320;
 }
 .aboutUs .about_info .about_title {
   font-size: 36px;
-  color: #000;
+  color: #602320;
 }
 .aboutUs .about_info .about_title_desc {
-  font-size: 18px;
-  color: #777;
+  font-size: 14px;
+  color: #333;
 }
 .aboutUs .about_info .about_content {
   float: left;
   width: 635px;
   font-size: 16px;
-  color: #999;
+  color: #888;
 }
 .aboutUs .about_info .about_content p {
-  text-indent: 1cm;
-  margin-bottom: 20px;
+  text-indent: 32px;
+  margin-bottom: 8px;
 }
 /*服务内容*/
 .service {
@@ -303,17 +315,31 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
 }
+.service_con .server_title_box {
+  width: 450px;
+  margin: 0 auto;
+}
 .service_con .server_title {
-  width: 100%;
-  position: absolute;
-  top: 100px;
+  height: 240px;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
   font-size: 30px;
   font-weight: 600;
   color: #fff;
 }
+.service_con .server_title .txt_box {
+  display: inline-block;
+  vertical-align: middle;
+}
+.service_con .server_title span {
+  display: inline-block;
+}
+.service_con .server_title .highlight {
+  color: #ff7879;
+}
 .ser_info {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 60px 0;
 }
@@ -326,17 +352,17 @@
 }
 .ser_info .info_item {
   position: relative;
-  width: 538px;
-  margin: 0 16px;
+  width: 47%;
+  margin: 0 1.5%;
   float: left;
   background: #fff;
 }
 .ser_info .info_item .top_img {
-  width: 538px;
-  height: 280px;
+  width: 100%;
   overflow: hidden;
 }
 .ser_info .info_item .top_img img {
+  display: block;
   width: 100%;
 }
 .ser_info .info_item .info_item_con {
@@ -356,6 +382,10 @@
   margin: 20px 0;
   font-size: 14px;
   color: #777;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .ser_info .info_item .info_item_text_first {
   padding-right: 80px;
@@ -384,30 +414,30 @@
   background: #fff;
 }
 .news_title {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0 15px 15px;
   font-size: 28px;
   font-weight: 600;
-  color: #404041;
+  color: #602320;
   border-top: 3px solid #602320;
 }
 .news_group {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   overflow: hidden;
 }
 .news_item {
-  width: 350px;
+  width: 30%;
   float: left;
-  margin: 0 15px;
+  margin: 0 1.6%;
 }
 .news_item .news_img {
-  width: 350px;
-  height: 200px;
+  width: 100%;
   overflow: hidden;
 }
 .news_item .news_img img {
+  display: block;
   width: 100%;
 }
 .news_item .news_detail {
@@ -423,6 +453,10 @@
 .news_item .news_detail .news_detail_title {
   margin: 10px 0;
   font-size: 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .news_item .news_detail .news_detail_title a {
   color: #602320;
@@ -443,7 +477,7 @@
   color: #602320;
 }
 .more_news {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   margin-top: 30px;
   text-align: center;
@@ -462,7 +496,7 @@
   color: #fff;
 }
 .footer .footer_con {
-  width: 1140px;
+  max-width: 1140px;
   height: 240px;
   margin: 0 auto;
   padding-top: 30px;
@@ -479,8 +513,11 @@
   border-bottom: 1px solid #999;
   color: #aaa;
 }
+.footer .company {
+  margin-top: 50px;
+}
 .footer .company .logo {
-  font-size: 30px;
+  font-size: 24px;
   color: #f2f2f2;
 }
 .footer .company .company_info {
@@ -531,10 +568,67 @@
   .cate_list {
     width: 580px;
   }
+  .aboutUs .about_info {
+    width: 635px;
+  }
+  .aboutUs .about_info .about_title_area {
+    width: 635px;
+    margin-right: 0;
+  }
+  .footer .foot_item {
+    width: 40%;
+    margin: 0 5%;
+  }
+  .footer .company {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .cate_list {
     width: 280px;
+  }
+  .aboutUs .about_info {
+    width: 80%;
+    padding: 3vh 0 3.5vh 0;
+  }
+  .aboutUs .about_info .about_title_area {
+    width: 100%;
+    margin-right: 0;
+  }
+  .aboutUs .about_info .about_title {
+    font-size: 1.4rem;
+  }
+  .aboutUs .about_info .about_content {
+    width: 100%;
+  }
+  .service_con .server_title_box {
+    width: 246px;
+  }
+  .service_con .server_title {
+    font-size: 1.2rem;
+  }
+  .ser_info .info_item {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 2vh;
+  }
+  .news_title {
+    font-size: 1.4rem;
+  }
+  .news_item {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 2vh;
+  }
+  .footer .foot_item {
+    float: none;
+    margin: 0 auto;
+  }
+  .footer .company {
+    display: none;
+  }
+  .footer .contact_us {
+    display: none;
   }
 }
 @media screen and (min-width: 565px) and (max-width: 768px) {
