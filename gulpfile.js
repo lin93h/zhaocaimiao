@@ -2,47 +2,9 @@
 var gulp = require('gulp');
 
 // 引入组件
-var less = require('gulp-less'), // less 文件转换
-minifycss = require('gulp-minify-css'), // css压缩
-rename = require('gulp-rename'), // 文件更名
-notify = require('gulp-notify');// 提示信息
-livereload = require('gulp-livereload'),// 网页自动刷新
-clean = require('gulp-clean'),
-concat = require('gulp-concat'),//合并
-uglify = require('gulp-uglify'),//js压缩
-jshint = require('gulp-jshint');
-var obfuscate = require('gulp-obfuscate');
-var runSequence = require('run-sequence');
-var jshint_cfg = {
-  "asi"      : true,
-  "browser"  : true,
-  "eqeqeq"   : false,
-  "eqnull"   : true,
-  "es3"      : true,
-  "expr"     : true,
-  "jquery"   : true,
-  "latedef"  : true,
-  "laxbreak" : true,
-  "nonbsp"   : true,
-  "strict"   : false,
-  "undef"    : true,
-  "unused"   : true
-};
+var less = require('gulp-less'); // less 文件转换
+var livereload = require('gulp-livereload');
 
-//====================
-//合并压缩pc端js
-gulp.task('pro-js-concat', function () {
-  gulp.src('dist/dev/pc/js/*.js')
-      .pipe(concat('fanwe-pc.min.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('dist/pro/js/'))
-})
-
-  //自动监听
-gulp.task('pro-js-watch', function () {
-    gulp.watch('dist/dev/pc/js/*.js', ['pro-js-concat'])
-})
-//=====================
 
 
 //====================
@@ -67,13 +29,14 @@ gulp.task('pro-css-watch', function () {
 //======================
 //pc端单文件、文件夹监听
 gulp.task('dev-less', function () {
-  gulp.src(['dist/dev/pc/less/*.less'])
+  gulp.src(['resource/less/*.less'])
     .pipe(less())
-    .pipe(gulp.dest('dist/pro/css/pc/'));
+    .pipe(gulp.dest('resource/css/'));
 });
   //自动监听
 gulp.task('dev-watch', function () {
-  gulp.watch('dist/dev/pc/less/*.less', ['dev-less'])
+  livereload.listen();
+  gulp.watch('resource/less/*.less', ['dev-less'])
 })
 //======================
 
@@ -91,3 +54,13 @@ gulp.task('dev-wap-watch', function () {
 })
 
 //======================
+
+
+//======================
+//监听所有页面
+gulp.task('watch', function () {
+  livereload.listen();
+  gulp.watch('index.html', function(e) {
+    livereload.changed(e.path)
+  })
+})
