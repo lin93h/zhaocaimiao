@@ -11,29 +11,28 @@
   z-index: 10;
   box-shadow: 0 0 10px #333;
   /*.server_phone {
-        height: 60px;
         float: right;
-        height: 60px;
-        line-height: 60px;
-        color: #fa7800;
+        height: 85px;
+        color: #A73233;
         margin-left: 40px;
         font-size: 20px;
-    }
-    .server_phone em {
-        display: inline-block;
-        height: 60px;
-        width: 40px;
-        background: url('~~/static/tel.png') no-repeat center;
-        float: left;
+        .phone_icon {
+            display: block;
+            float: left;
+            line-height: 85px;
+            clear: both;
+        }
+        .phone_number {
+            height: 85px;
+        }
     }*/
 }
 .header .container {
   position: relative;
   width: 100%;
   min-width: 320px;
-  max-width: 1140px;
-  line-height: 85px;
-  padding: 0 50px;
+  max-width: 1200px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 .header .logo-box {
@@ -50,6 +49,7 @@
 }
 .header .nav-list {
   float: right;
+  line-height: 85px;
 }
 .header .nav-list .link {
   display: block;
