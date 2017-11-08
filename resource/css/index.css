@@ -10,22 +10,6 @@
   background: #fff;
   z-index: 10;
   box-shadow: 0 0 10px #333;
-  /*.server_phone {
-        float: right;
-        height: 85px;
-        color: #A73233;
-        margin-left: 40px;
-        font-size: 20px;
-        .phone_icon {
-            display: block;
-            float: left;
-            line-height: 85px;
-            clear: both;
-        }
-        .phone_number {
-            height: 85px;
-        }
-    }*/
 }
 .header .container {
   position: relative;
@@ -121,6 +105,32 @@
 .header .mobile_nav_list li a {
   color: #A73133;
 }
+.header .phone_box {
+  float: right;
+  color: #A73233;
+  margin-left: 40px;
+  font-size: 20px;
+}
+.header .phone_box .phone_icon {
+  float: left;
+  line-height: 78px;
+}
+.header .phone_box .phone_number {
+  float: right;
+  line-height: 85px;
+}
+.header .phone_fix_bottom {
+  display: none;
+  position: fixed;
+  right: 5vw;
+  bottom: 8vh;
+  width: 64px;
+  height: 64px;
+  background: url('../images/fix_phone.png') center no-repeat #0DA3DA;
+  background-size: 50%;
+  border-radius: 50px;
+  box-shadow: 0 0 8px #0DA3DA;
+}
 .page_content {
   position: relative;
 }
@@ -192,21 +202,23 @@
   background: #F2F2F2;
 }
 .cate_list {
-  overflow: hidden;
   width: 1160px;
   margin: 0 auto;
 }
 .cate_list .cate_item {
-  position: relative;
   float: left;
-  width: 280px;
-  height: 145px;
   margin: 5px;
-  text-align: center;
-  overflow: hidden;
+  box-shadow: 0 4px 8px #602320;
 }
 .cate_list .cate_item:hover .item_con {
   top: 0;
+}
+.cate_list .cate_item .cate_item_body {
+  position: relative;
+  width: 280px;
+  height: 145px;
+  text-align: center;
+  overflow: hidden;
 }
 .cate_list .cate_item .cate_item_bg {
   position: relative;
@@ -476,6 +488,9 @@
 .news_item .news_detail .read_on a {
   color: #602320;
 }
+.news_item:hover .news_detail {
+  background: #fff;
+}
 .more_news {
   max-width: 1140px;
   margin: 0 auto;
@@ -489,6 +504,11 @@
   color: #e86240;
   border: 1px solid #e86240;
   border-radius: 3px;
+  background: #fff;
+}
+.more_news .more_btn:hover {
+  color: #fff;
+  background: #e86240;
 }
 /*底部信息*/
 .footer {
@@ -584,8 +604,14 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .header .phone_box {
+    display: none;
+  }
   .cate_list {
     width: 280px;
+  }
+  .cate_list .cate_item {
+    margin-bottom: 2vh;
   }
   .aboutUs .about_info {
     width: 80%;
@@ -681,6 +707,9 @@
   }
 }
 @media screen and (max-width: 425px) {
+  .header .phone_fix_bottom {
+    display: block;
+  }
   .bg_banner {
     height: 210px;
   }

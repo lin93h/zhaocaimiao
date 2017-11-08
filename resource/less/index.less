@@ -108,22 +108,32 @@
             }
         }
     }
-    /*.server_phone {
+    .phone_box {
         float: right;
-        height: 85px;
         color: #A73233;
         margin-left: 40px;
         font-size: 20px;
         .phone_icon {
-            display: block;
             float: left;
+            line-height: 78px;
+        }
+        .phone_number{
+            float: right;
             line-height: 85px;
-            clear: both;
         }
-        .phone_number {
-            height: 85px;
-        }
-    }*/
+    }
+    .phone_fix_bottom {
+        display: none;
+        position: fixed;
+        right: 5vw;
+        bottom: 8vh;
+        width: 64px;
+        height: 64px;
+        background: url('../images/fix_phone.png')center no-repeat #0DA3DA;
+        background-size: 50%;
+        border-radius: 50px;
+        box-shadow: 0 0 8px #0DA3DA;
+    }
 }
 
 .page_content {
@@ -206,21 +216,24 @@
     background: #F2F2F2;
 }
 .cate_list {
-    overflow: hidden;
     width: 1160px;
     margin: 0 auto;
     .cate_item {
-        position: relative;
         float: left;
-        width: 280px;
-        height: 145px;
         margin: 5px;
-        text-align: center;
-        overflow: hidden;
+        box-shadow: 0 4px 8px #602320;
+        
         &:hover {
             .item_con {
                 top: 0;
             }
+        }
+        .cate_item_body {
+            position: relative;
+            width: 280px;
+            height: 145px;
+            text-align: center;
+            overflow: hidden;
         }
         .cate_item_bg {
             position: relative;
@@ -497,6 +510,11 @@
             }
         }
     }
+    &:hover {
+        .news_detail {
+            background: #fff;
+        }
+    }
 }
 .more_news {
     max-width: 1140px;
@@ -510,6 +528,11 @@
         color: #e86240;
         border: 1px solid #e86240;
         border-radius: 3px;
+        background: #fff;
+        &:hover {
+            color: #fff;
+            background: #e86240;
+        }
     }
 }
 
@@ -614,8 +637,16 @@
     }
 }
 @media screen and (max-width: 768px) {
+    .header {
+        .phone_box {
+            display: none;
+        }
+    }
     .cate_list {
         width: 280px;
+        .cate_item {
+            margin-bottom: 2vh;
+        }
     }
     .aboutUs {
         .about_info {
@@ -727,6 +758,11 @@
     }
 }
 @media screen and (max-width:425px) {
+    .header {
+        .phone_fix_bottom {
+            display: block;
+        }
+    }
     .bg_banner {
         height: 210px;
     }
