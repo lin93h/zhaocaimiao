@@ -210,6 +210,15 @@
     }
 }
 
+/*锚点*/
+.column {
+    position: relative;
+}
+.anchor {
+    position: absolute;
+    top: -85px;
+    left: 0;
+}
 /*category业务分类*/
 .category {
     padding: 20px 0;
@@ -713,6 +722,9 @@
     }
 }
 @media screen and (max-width: 565px) {
+    .anchor {
+        top: -60px;
+    }
     //顶部
     .header ~ .page_content {
         margin-top: 60px;

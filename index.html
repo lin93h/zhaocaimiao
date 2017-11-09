@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="./resource/css/index.css">
 </head>
 <body>
-	<div class="header">
+	<div class="header" id="header">
         <div class="container clearfix">
             <div class="phone_box clearfix">
                 <div class="phone_icon"><img src="./resource/images/phone.png" alt="phone"></div>
@@ -26,26 +26,26 @@
             </div>
             <ul class="nav-list">
                 <li class="nav-item index-link">
-                    <a class="link" href="">关于我们</a>
+                    <a class="link" href="#category">行业</a>
                 </li>
                 <li class="nav-item mendian-link" >
-                    <a class="link" href="">行业</a>
+                    <a class="link" href="#service">服务</a>
                 </li>
                 <li class="nav-item shangcheng-link">
-                    <a class="link" href="">服务</a>
+                    <a class="link" href="#aboutUs">关于我们</a>
                 </li>
                 <li class="nav-item">
-                    <a class="link" href="">政策法规</a>
+                    <a class="link" href="#news">政策法规</a>
                 </li>
             </ul>
             <div class="mobile_nav">
                 <a href="javascript:void(0)"><img src="./resource/images/nav.png" alt="导航图标"></a>
             </div>
             <ul class="mobile_nav_list" v-if="show">
-                <li><a href="">关于我们</a></li>
-                <li><a href="">行业</a></li>
-                <li><a href="">服务</a></li>
-                <li><a href="">政策法规</a></li>
+                <li><a href="#category">行业</a></li>
+                <li><a href="#service">服务</a></li>
+                <li><a href="#aboutUs">关于我们</a></li>
+                <li><a href="#news">政策法规</a></li>
             </ul>
         </div>
     </div>
@@ -63,7 +63,7 @@
 			</div>
       	</div>
       	
-      	<div class="category">
+      	<div class="category column"><span id="category" class="anchor"></span>
 	        <div class="cate_list clearfix">
 	            <a href="javascript:void(0)">
 	                <div class="cate_item">
@@ -140,7 +140,7 @@
 	        </div>
 	    </div>
 
-	    <div class="aboutUs">
+	    <div class="aboutUs column"><span id="aboutUs" class="anchor"></span>
 	        <div class="about_info">
 	            <div class="about_title_area">
 	                <div class="about_title">关于我们</div>
@@ -155,7 +155,7 @@
 	        </div>
 	    </div>
 
-	    <div class="service">
+	    <div class="service column"><span id="service" class="anchor"></span>
 		  <div class="service_con">
 		      <div class="ser_img_box">
 		          <img class="ser_img" src="./resource/images/bg_banner.jpg" alt="bg_img">
@@ -259,7 +259,7 @@
 		  </div>
 		</div>
 
-		<div class="news">
+		<div class="news column"><span id="news" class="anchor"></span>
 	        <div class="news_title">政策法规</div>
 	        <div class="news_group">
 	            <div class="news_item">
