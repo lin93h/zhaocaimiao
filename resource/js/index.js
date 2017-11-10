@@ -21,5 +21,9 @@ $(function () {
             return false;
           }
         }
-      });
+    });
+
+    $.getJSON("/resource/js/index.txt", function(data) {
+      console.log(data)
+    })
 })
