@@ -23,7 +23,7 @@ $(function () {
         }
     });
 
-    $.getJSON("/resource/js/index.txt", function(data) {
-      console.log(data)
+    $.getJSON("./data/index.json", function(data) {
+      console.log('本地json数据：',data)
     })
 })
