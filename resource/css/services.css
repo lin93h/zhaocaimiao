@@ -1,0 +1,170 @@
+/*banner*/
+.service_banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.service_banner img {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+.service_banner .cate_title_box {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.service_banner .cate_title_box .cate_info {
+  width: 40%;
+  margin-top: 40px;
+  padding: 20px;
+  background: #A73233;
+  color: #fff;
+}
+.service_banner .cate_title_box .cate_info .cate_title {
+  font-size: 32px;
+}
+.service_banner .cate_title_box .cate_info .cate_desc {
+  font-size: 16px;
+}
+/*服务分类*/
+.service_info {
+  padding-bottom: 40px;
+  background: #f2f2fa;
+}
+.cate_group {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.cate_group .cate_nav_list {
+  float: left;
+  width: 20%;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(96, 35, 32, 0.5);
+}
+.cate_group .cate_nav_list .cate_nav_item {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #A73233;
+  background: #fff;
+}
+.cate_group .cate_nav_list .active {
+  background: #A73233;
+  color: #fff;
+}
+.cate_group .cate_list {
+  position: relative;
+  float: left;
+  width: 75%;
+  margin-left: 5%;
+}
+.cate_group .cate_list .item_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+}
+.cate_group .cate_list .item_box_active {
+  opacity: 1;
+  z-index: 1;
+}
+.cate_group .cate_list .cate_item {
+  display: block;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding: 4px 20px;
+  color: #A73233;
+  font-size: 16px;
+  background: #fff;
+  border: 2px solid #A73233;
+  border-radius: 50px;
+}
+.cate_group .cate_list .cate_item:hover {
+  background: #A73233;
+  color: #fff;
+}
+.cate_group .cate_list .active {
+  background: #A73233;
+  color: #fff;
+}
+.service_desc {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.service_desc:before {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  content: '';
+  width: 96%;
+  height: 2px;
+  background: #602320;
+}
+.service_desc .service_title {
+  padding: 20px 0;
+  font-size: 28px;
+  text-align: center;
+  color: #602320;
+}
+.service_desc .desc_text {
+  font-size: 16px;
+  color: #333;
+  text-indent: 32px;
+  padding: 0 5%;
+}
+.service_desc .desc_text p {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .service_banner {
+    height: 214px;
+  }
+  .service_banner .cate_title_box .cate_info {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4vh;
+  }
+  .service_banner .cate_title_box .cate_info .cate_title {
+    font-size: 1.2rem;
+  }
+  .service_banner .cate_title_box .cate_info .cate_desc {
+    font-size: 0.6rem;
+  }
+  .cate_group {
+    padding-bottom: 60px;
+  }
+  .cate_group .cate_nav_list .cate_nav_item {
+    font-size: 0.6rem;
+  }
+  .cate_group .cate_list {
+    width: 74%;
+    margin-left: 6%;
+  }
+  .cate_group .cate_list .cate_item {
+    font-size: 0.6rem;
+    margin-right: 10px;
+    padding: 4px 10px;
+  }
+  .service_desc .service_title {
+    font-size: 1.2rem;
+  }
+  .service_desc .desc_text {
+    font-size: 0.6rem;
+  }
+}

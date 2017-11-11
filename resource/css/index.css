@@ -405,6 +405,10 @@
   .cate_list .cate_item {
     margin-bottom: 2vh;
   }
+  .cate_list .cate_item .item_con {
+    top: 0;
+    opacity: 0.9;
+  }
   .aboutUs .about_info {
     width: 80%;
     padding: 3vh 0 3.5vh 0;
