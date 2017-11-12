@@ -222,6 +222,9 @@
   .header .phone_box {
     display: none;
   }
+  .header .site-title {
+    font-size: 16px;
+  }
   .footer .foot_item {
     float: none;
     margin: 0 auto;
