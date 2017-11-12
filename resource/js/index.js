@@ -7,6 +7,16 @@ $(function () {
         $('.mobile_nav_list').slideUp()
     })
 
+    //右侧二维码
+    $('.fixed_qrcode .qr_box').hover(
+      function () {
+        $(this).addClass('qr_active')
+      },
+      function () {
+        $(this).removeClass('qr_active')
+      }
+    )
+
     //平滑滚动锚点
     $('a[href*=#],area[href*=#]').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

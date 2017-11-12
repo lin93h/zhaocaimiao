@@ -265,3 +265,46 @@
     display: block;
   }
 }
+/*二维码*/
+.fixed_qrcode {
+  position: fixed;
+  right: 1%;
+  top: 48%;
+}
+.fixed_qrcode .qr_box {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-bottom: 5px;
+  background: #728494;
+  border-radius: 3px;
+}
+.fixed_qrcode .qr_box .icon {
+  width: 30px;
+  margin: 4px 0;
+}
+.fixed_qrcode .qr_box .show_qr {
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+  width: 0;
+  border-radius: 2px;
+  transition: all .5s;
+  -moz-transition: all .5s;
+  /* Firefox 4 */
+  -webkit-transition: all .5s;
+  /* Safari 和 Chrome */
+  -o-transition: all .5s;
+  /* Opera */
+}
+.fixed_qrcode .qr_box .tip {
+  font-size: 12px;
+  color: #fff;
+}
+.fixed_qrcode .qr_active {
+  background: #A73233;
+}
+.fixed_qrcode .qr_active .show_qr {
+  width: 100px;
+}
