@@ -33,12 +33,11 @@
     .nav-list {
         float: right;
         line-height: 85px;
+        background: #fff;
         .link {
             display: block;
             color: #602320;
             font-weight: 600;
-            
-            //padding: 0 25px;
         }
         .nav_active {
             position: relative;
@@ -68,7 +67,7 @@
         font-size: 14px;
         text-align: center;
         border-radius: 4px;
-        margin-left: 25px;
+        margin: 0 12px;
         &:hover {
             &:after {
                 position: absolute;
@@ -111,7 +110,7 @@
     .phone_box {
         float: right;
         color: #A73233;
-        margin-left: 40px;
+        margin-left: 20px;
         font-size: 20px;
         .phone_icon {
             float: left;
@@ -192,6 +191,9 @@
                 img {
                     margin-right: 10px;
                 }
+            }
+            .contact {
+                display: none;
             }
         }
     }
@@ -275,6 +277,15 @@
     .header {
         .phone_fix_bottom {
             display: block;
+        }
+    }
+    .footer {
+        .hotline {
+            .about_text {
+                .contact {
+                    display: block;
+                }
+            }
         }
     }
 }

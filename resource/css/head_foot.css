@@ -34,6 +34,7 @@
 .header .nav-list {
   float: right;
   line-height: 85px;
+  background: #fff;
 }
 .header .nav-list .link {
   display: block;
@@ -67,7 +68,7 @@
   font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  margin-left: 25px;
+  margin: 0 12px;
 }
 .header .nav-item:hover:after {
   position: absolute;
@@ -108,7 +109,7 @@
 .header .phone_box {
   float: right;
   color: #A73233;
-  margin-left: 40px;
+  margin-left: 20px;
   font-size: 20px;
 }
 .header .phone_box .phone_icon {
@@ -191,6 +192,9 @@
 .footer .hotline .about_text .icon_group img {
   margin-right: 10px;
 }
+.footer .hotline .about_text .contact {
+  display: none;
+}
 .footer .contact_us .contact_con {
   font-size: 14px;
   color: #ddd;
@@ -255,6 +259,9 @@
 }
 @media screen and (max-width: 425px) {
   .header .phone_fix_bottom {
+    display: block;
+  }
+  .footer .hotline .about_text .contact {
     display: block;
   }
 }
