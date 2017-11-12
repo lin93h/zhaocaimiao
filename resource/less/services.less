@@ -32,8 +32,13 @@
 
 /*服务分类*/
 .service_info {
+    position: relative;
     padding-bottom: 40px;
     background: #f2f2fa;
+    #service_info {
+        position: absolute;
+        top: -86px;
+    }
 }
 .cate_group {
     max-width: 1140px;
@@ -125,9 +130,35 @@
         text-indent: 32px;
         padding: 0 5%;
         p {
+            position: relative;
             line-height: 30px;
             margin-bottom: 10px;
+            .point_key {
+                position: absolute;
+                top: -86px;
+            }
         }
+    }
+}
+
+.scroll_top {
+    display: block;
+    position: fixed;
+    right: 1%;
+    bottom: 10%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    
+    background: #728494;
+    img {
+        display: block;
+        width: 30px;
+        margin: 4px auto;
+    }
+    .txt_tip {
+        font-size: 12px;
+        color: #fff;
     }
 }
 

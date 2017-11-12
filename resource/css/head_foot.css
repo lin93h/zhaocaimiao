@@ -270,6 +270,7 @@
   position: fixed;
   right: 1%;
   top: 48%;
+  z-index: 10;
 }
 .fixed_qrcode .qr_box {
   position: relative;
@@ -277,7 +278,7 @@
   height: 60px;
   text-align: center;
   margin-bottom: 5px;
-  background: #728494;
+  background: rgba(114, 132, 148, 0.8);
   border-radius: 3px;
 }
 .fixed_qrcode .qr_box .icon {
