@@ -316,6 +316,7 @@
   overflow: hidden;
 }
 .news_item {
+  position: relative;
   width: 30%;
   float: left;
   margin: 0 1.6%;
@@ -327,6 +328,29 @@
 .news_item .news_img img {
   display: block;
   width: 100%;
+}
+.news_item .news_addr {
+  display: table-cell;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+  padding-top: 10%;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+.news_item .news_addr .txt {
+  font-size: 18px;
+  font-weight: bold;
+}
+.news_item .news_addr .txt_desc {
+  font-size: 14px;
+  color: #ddd;
 }
 .news_item .news_detail {
   padding: 25px 30px;
