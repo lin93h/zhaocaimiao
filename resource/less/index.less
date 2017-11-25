@@ -247,20 +247,22 @@
     max-width: 1140px;
     margin: 0 auto;
     padding: 60px 0;
-    .the_first_two {
-        overflow: hidden;
-    }
     .the_second_two {
         margin-top: 20px;
-        overflow: hidden;
+        .info_item_icon {
+            display: none;
+        }
     }
     .info_item {
         position: relative;
         width: 47%;
         margin: 0 1.5%;
-        
         float: left;
         background: #fff;
+        transition: all .5s;
+        -moz-transition: all .5s; /* Firefox 4 */
+        -webkit-transition: all .5s; /* Safari 和 Chrome */
+        -o-transition: all .5s; /* Opera */
         
         .top_img {
             width: 100%;
@@ -268,11 +270,24 @@
             img {
                 display: block;
                 width: 100%;
+                transition: all .5s;
+                -moz-transition: all .5s; /* Firefox 4 */
+                -webkit-transition: all .5s; /* Safari 和 Chrome */
+                -o-transition: all .5s; /* Opera */
             }
         }
         .info_item_con {
             padding: 20px 30px;
             border: 1px solid #ddd;
+        }
+        &:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .5);
+            .top_img img {
+                -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
+                zoom: 1.2;
+            }
         }
         .info_item_text {
             position: relative;
@@ -333,19 +348,34 @@
 .news_group {
     max-width: 1140px;
     margin: 0 auto;
-    overflow: hidden;
 }
 .news_item {
     position: relative;
     width: 30%;
     float: left;
     margin: 0 1.6%;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, .3);
     .news_img {
         width: 100%;
         overflow: hidden;
         img {
             display: block;
             width: 100%;
+            border-radius: 2px;
+            transition: all .5s;
+            -moz-transition: all .5s; /* Firefox 4 */
+            -webkit-transition: all .5s; /* Safari 和 Chrome */
+            -o-transition: all .5s; /* Opera */
+        }
+    }
+    &:hover {
+        .news_img {
+            img {
+                -webkit-transform: scale(1.3);
+                -ms-transform: scale(1.3);
+                transform: scale(1.3);
+                zoom: 1.3;
+            }
         }
     }
     .news_addr {
@@ -362,12 +392,25 @@
         color: #fff;
         background: rgba(0, 0, 0, .5);
         text-align: left;
+        border-radius: 2px;
         .txt {
+            position: relative;
+            padding-left: 10px;
+            margin-bottom: 4px;
             font-size: 18px;
             font-weight: bold;
+            &:after {
+                position: absolute;
+                left: 0;
+                bottom: 5px;
+                content: '';
+                width: 3px;
+                height: 18px;
+                background: #fff;
+            }
         }
         .txt_desc {
-            font-size: 14px;
+            font-size: 12px;
             color: #ddd;
         }
     }
@@ -489,6 +532,17 @@
             width: 90%;
             margin-left: 5%;
             margin-bottom: 2vh;
+            .top_img {
+                display: none;
+            }
+        }
+        .the_second_two {
+            .info_item_icon {
+                display: block;
+            }
+        }
+        .info_item_text_second {
+            padding-right: 80px;
         }
     }
     .news_title {
